@@ -27,12 +27,19 @@
       </form>
       <% } %>
     </header>
-    <section id="tasks">
+    <section id="tasks" class="tasks">
       <ul>
         <% tasksList.forEach((task) => { %>
         <li><%= task.task %> | <%= task.date.toLocaleDateString("pt-br") %></li>
-        <a href="/getById/<%= task._id %>/update" id="edit">Editar</a>
-        <a href="/getById/<%= task._id %>/delete" id="delete">Apagar</a>
+        <a class="editButton" href="/getById/<%= task._id %>/update" id="edit"
+          >Editar</a
+        >
+        <a
+          class="deleteButton"
+          href="/getById/<%= task._id %>/delete"
+          id="delete"
+          >Apagar</a
+        >
         <% }) %>
       </ul>
     </section>

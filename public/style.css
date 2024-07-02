@@ -48,6 +48,7 @@ input {
   transition: 800ms ease all;
   outline: none;
   vertical-align: top;
+  box-sizing: border-box;
 }
 .buttonSub:hover {
   background: #f9f3cc;
@@ -75,8 +76,16 @@ button:hover:after {
   width: 100%;
   transition: 800ms ease all;
 }
+@media (max-width: 768px) {
+  .buttonSub {
+    font-size: 1em;
+    padding: 0.5em;
+    height: 2.5rem;
+  }
+}
 
 /* BOTÃO ATUALIZAR */
+
 .buttonRel {
   background: #8eaccd;
   color: #f9f3cc;
@@ -90,6 +99,7 @@ button:hover:after {
   transition: 800ms ease all;
   outline: none;
   vertical-align: top;
+  box-sizing: border-box;
 }
 .buttonRel:hover {
   background: #f9f3cc;
@@ -116,4 +126,26 @@ button:after {
 button:hover:after {
   width: 100%;
   transition: 800ms ease all;
+}
+@media (max-width: 768px) {
+  .buttonRel {
+    font-size: 1em;
+    padding: 0.5em;
+    height: 2.5rem;
+  }
+}
+.tasks {
+  display: flex;
+  padding: 1rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  position: relative;
+  padding: 0 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
