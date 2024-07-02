@@ -1,3 +1,119 @@
-h1 {
-  color: red;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Fira Sans, Arial;
+}
+
+body {
+  background-color: #d2e0fb;
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+header {
+  background-color: #f9f3cc;
+  padding: 3rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+header h1 {
+  padding-bottom: 3rem;
+}
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 1rem;
+  font-size: 1 rem;
+  outline: none;
+  background-color: #8eaccd;
+  color: black;
+  vertical-align: top;
+}
+
+/* BOTÃO ADICIONAR */
+.buttonSub {
+  background: #8eaccd;
+  color: #f9f3cc;
+  width: auto;
+  border: none;
+  position: relative;
+  height: 3rem;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  vertical-align: top;
+}
+.buttonSub:hover {
+  background: #f9f3cc;
+  color: black;
+}
+.buttonSub:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: black;
+  transition: 400ms ease all;
+}
+.buttonSub:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.buttonSub:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+/* BOTÃO ATUALIZAR */
+.buttonRel {
+  background: #8eaccd;
+  color: #f9f3cc;
+  width: auto;
+  border: none;
+  position: relative;
+  height: 3rem;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  vertical-align: top;
+}
+.buttonRel:hover {
+  background: #f9f3cc;
+  color: black;
+}
+.buttonRel:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: black;
+  transition: 400ms ease all;
+}
+.buttonRel::after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.buttonRel:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
 }
