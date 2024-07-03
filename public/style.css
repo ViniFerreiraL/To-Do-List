@@ -134,18 +134,43 @@ button:hover:after {
     height: 2.5rem;
   }
 }
-.tasks {
-  display: flex;
-  padding: 1rem;
+section#tasks {
+  margin: 0.5rem;
 }
 ul {
   list-style: none;
-  padding: 0;
+  background-color: #8eaccd;
 }
 ul li {
   position: relative;
   padding: 0 2rem 0 1rem;
   display: flex;
+  background-color: #8eaccd;
+  text-decoration: none;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 1.3rem;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+}
+ul li span {
+  color: black;
+  font-size: 0.8rem;
+  font-style: Fira Sans;
+  padding-left: 1rem;
+}
+ul li div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+ul li:nth-child(odd) {
+  background-color: #d2e0fb;
+}
+ul li:hover {
+  background-color: rgb(83, 151, 207);
 }

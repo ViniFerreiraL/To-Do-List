@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <title>To do list</title>
   </head>
   <body>
@@ -30,16 +34,22 @@
     <section id="tasks" class="tasks">
       <ul>
         <% tasksList.forEach((task) => { %>
-        <li><%= task.task %> | <%= task.date.toLocaleDateString("pt-br") %></li>
-        <a class="editButton" href="/getById/<%= task._id %>/update" id="edit"
-          >Editar</a
-        >
-        <a
-          class="deleteButton"
-          href="/getById/<%= task._id %>/delete"
-          id="delete"
-          >Apagar</a
-        >
+        <li>
+          <div>
+            <a href="/"><%= task.task %> </a>
+            <span>
+              Criado em: <%= task.date.toLocaleDateString("pt-br") %></span
+            >
+          </div>
+          <div>
+            <a href="/getById/<%= task._id %>/update" id="edit"
+              ><i class="bi bi-pencil-square"></i
+            ></a>
+            <a href="/getById/<%= task._id %>/delete" id="delete"
+              ><i class="bi bi-trash3"></i
+            ></a>
+          </div>
+        </li>
         <% }) %>
       </ul>
     </section>
