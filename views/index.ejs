@@ -11,26 +11,47 @@
     <title>To do list</title>
   </head>
   <body>
-    <header id="cab">
+    <header>
       <% if(task == null){ %>
-      <h1>TO DO LIST</h1>
-      <form action="/create" method="post">
-        <input type="text" name="task" id="task" placeholder="Insira" />
-        <button id="addButton" class="buttonSub" type="submit">
-          Adicionar
-        </button>
-      </form>
 
-      <% } else{ %>
-      <h1>EDITAR TAREFA</h1>
-      <form action="/updateOne/<%= task._id %>" method="post">
-        <input type="text" name="task" id="task" value="<%= task.task %>" />
-        <button id="addButton" class="buttonRel" type="submit">
-          Atualizar
-        </button>
-      </form>
-      <% } %>
+      <h1 class="classTitle">TO DO LIST</h1>
+      <div class="container">
+        <form class="taskForm" action="/create" method="post">
+          <input
+            type="text"
+            class="inputTask"
+            name="task"
+            id="task"
+            placeholder="Insira"
+          />
+          <button id="addButton" class="buttonSub" type="submit">
+            Adicionar
+          </button>
+        </form>
+      </div>
+
+      <div>
+        <% } else{ %>
+        <h1 class="classTitle">EDITAR TAREFA</h1>
+        <form
+          class="taskForm"
+          action="/updateOne/<%= task._id %>"
+          method="post"
+        >
+          <input
+            type="text"
+            name="task"
+            class="subTask"
+            value="<%= task.task %>"
+          />
+          <button id="addButton" class="buttonRel" type="submit">
+            Atualizar
+          </button>
+        </form>
+        <% } %>
+      </div>
     </header>
+
     <section id="tasks" class="tasks">
       <ul>
         <% tasksList.forEach((task) => { %>

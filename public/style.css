@@ -7,170 +7,50 @@
 }
 
 body {
-  background-color: #d2e0fb;
-  width: 100%;
-  height: 100%;
-  color: black;
+  background-color: #fff;
 }
-header {
-  background-color: #f9f3cc;
-  padding: 3rem;
-  margin: 0.5rem;
+
+.classTitle {
   text-align: center;
-}
-header h1 {
-  padding-bottom: 3rem;
-}
-input {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 1rem;
-  font-size: 1 rem;
-  outline: none;
-  background-color: #8eaccd;
-  color: black;
-  vertical-align: top;
+  background-color: #f1ece6;
 }
 
-/* BOTÃO ADICIONAR */
-.buttonSub {
-  background: #8eaccd;
-  color: #f9f3cc;
-  width: auto;
-  border: none;
-  position: relative;
-  height: 3rem;
-  font-size: 1.6em;
-  padding: 0 2em;
-  cursor: pointer;
-  transition: 800ms ease all;
-  outline: none;
-  vertical-align: top;
-  box-sizing: border-box;
-}
-.buttonSub:hover {
-  background: #f9f3cc;
-  color: black;
-}
-.buttonSub:before,
-button:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 2px;
-  width: 0;
-  background: black;
-  transition: 400ms ease all;
-}
-.buttonSub:after {
-  right: inherit;
-  top: inherit;
-  left: 0;
-  bottom: 0;
-}
-.buttonSub:hover:before,
-button:hover:after {
-  width: 100%;
-  transition: 800ms ease all;
-}
-@media (max-width: 768px) {
-  .buttonSub {
-    font-size: 1em;
-    padding: 0.5em;
-    height: 2.5rem;
-  }
+.container {
+  width: 25%;
+  margin: 1rem auto;
+  padding: 0.8rem;
+  color: #f1ece6;
+  border-radius: 40px;
 }
 
-/* BOTÃO ATUALIZAR */
-
-.buttonRel {
-  background: #8eaccd;
-  color: #f9f3cc;
-  width: auto;
-  border: none;
-  position: relative;
-  height: 3rem;
-  font-size: 1.6em;
-  padding: 0 2em;
-  cursor: pointer;
-  transition: 800ms ease all;
-  outline: none;
-  vertical-align: top;
-  box-sizing: border-box;
-}
-.buttonRel:hover {
-  background: #f9f3cc;
-  color: black;
-}
-.buttonRel:before,
-button:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 2px;
-  width: 0;
-  background: black;
-  transition: 400ms ease all;
-}
-.buttonRel::after {
-  right: inherit;
-  top: inherit;
-  left: 0;
-  bottom: 0;
-}
-.buttonRel:hover:before,
-button:hover:after {
-  width: 100%;
-  transition: 800ms ease all;
-}
-@media (max-width: 768px) {
-  .buttonRel {
-    font-size: 1em;
-    padding: 0.5em;
-    height: 2.5rem;
-  }
-}
-section#tasks {
-  margin: 0.5rem;
-}
-ul {
-  list-style: none;
-  background-color: #8eaccd;
-}
-ul li {
-  position: relative;
-  padding: 0 2rem 0 1rem;
+.taskForm {
   display: flex;
-  background-color: #8eaccd;
-  text-decoration: none;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  font-size: 1.3rem;
 }
-ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.3rem;
+
+.inputTask {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem 0rem 0rem 1rem;
 }
-ul li span {
-  color: black;
-  font-size: 0.8rem;
-  font-style: Fira Sans;
-  padding-left: 1rem;
+
+.buttonSub {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+  margin: 0;
+  background-color: #76b7cd;
+  color: white;
 }
-ul li div {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-ul li:nth-child(odd) {
-  background-color: #d2e0fb;
-}
-ul li:hover {
-  background-color: rgb(83, 151, 207);
+.tasks ul {
+  text-align: center;
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 2px solid #76b7cd;
+  border-radius: 10px;
+  list-style: none;
 }
