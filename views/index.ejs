@@ -15,6 +15,7 @@
       <% if(task == null){ %>
 
       <h1 class="classTitle">TO DO LIST</h1>
+
       <div class="container">
         <form class="taskForm" action="/create" method="post">
           <input
@@ -24,13 +25,12 @@
             id="task"
             placeholder="Insira"
           />
+
           <button id="addButton" class="buttonSub" type="submit">
             Adicionar
           </button>
         </form>
-      </div>
 
-      <div>
         <% } else{ %>
         <h1 class="classTitle">EDITAR TAREFA</h1>
         <form
@@ -62,7 +62,7 @@
               Criado em: <%= task.date.toLocaleDateString("pt-br") %></span
             >
           </div>
-          <div>
+          <div class="task-actions">
             <a href="/getById/<%= task._id %>/update" id="edit"
               ><i class="bi bi-pencil-square"></i
             ></a>
