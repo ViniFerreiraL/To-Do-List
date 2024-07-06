@@ -56,8 +56,8 @@
       <ul>
         <% tasksList.forEach((task) => { %>
         <li>
-          <div>
-            <a href="/"><%= task.task %> </a>
+          <a href="/"><%= task.task %> </a>
+          <div class="task-content">
             <span>
               Criado em: <%= task.date.toLocaleDateString("pt-br") %></span
             >
@@ -78,12 +78,19 @@
     <% if(taskDelete != null){%>
     <section id="modal">
       <div id="card">
-        <a href="/home">X</a>
-        <h2>Confirmação</h2>
+        <div id="head">
+          <h2>Confirmação</h2>
+
+          <a id="close" href="/home"><i class="bi bi-x-circle"></i></a>
+        </div>
+
         <hr />
+
         <p>Deseja Apagar a tarefa: <%= taskDelete.task %>?</p>
-        <a href="/home">Não</a>
-        <a href="/deleteOne/<%=taskDelete._id%>">Sim</a>
+        <div id="btns">
+          <a id="btnNot" href="/home">Não</a>
+          <a id="btnYes" href="/deleteOne/<%=taskDelete._id%>">Sim</a>
+        </div>
       </div>
     </section>
     <% } %>
