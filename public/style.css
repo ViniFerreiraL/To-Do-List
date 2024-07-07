@@ -77,15 +77,13 @@ body {
 }
 
 .tasks ul {
-  align-items: center;
   text-align: justify;
   max-width: 1040px;
   width: 100%;
   margin: 0rem auto;
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 2rem 2rem;
   border-radius: 20px;
   list-style: none;
-  justify-content: space-between;
   background-color: #f1ece6;
   transition: 800ms ease all;
   outline: none;
@@ -95,6 +93,7 @@ body {
 .tasks ul li {
   display: flex;
   font-size: 1.1rem;
+  padding-left: 2rem;
   flex-direction: row;
   align-items: center;
   line-height: 1.6rem;
@@ -226,4 +225,36 @@ div#btns a#btnYes {
 div#btns a#btnYes:hover {
   background-color: green;
   color: black;
+}
+
+ul li.check-true,
+ul li.check-false {
+  background-color: #f1ece6;
+  color: black;
+  text-decoration: line-through;
+  position: relative;
+}
+
+ul li a.check-true::before {
+  content: "";
+  position: absolute;
+  border: black solid;
+  top: 3px;
+  height: 16px;
+  left: 11px;
+  width: 7px;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+ul li a.check-false::before {
+  content: "";
+  position: absolute;
+  border: black solid;
+  top: 3px;
+  height: 16px;
+  left: 7px;
+  width: 16px;
+  border-width: 2px;
+  border-radius: 1rem;
 }

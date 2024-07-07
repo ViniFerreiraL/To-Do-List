@@ -57,6 +57,18 @@ const deleteTask = async (req, res) => {
     res.status(500).send({ erro: err.message });
   }
 };
+const checkTask = async (req, res) => {
+  try {
+    const task = await Task.findOne({ _id: req, params, id });
+    if (task.Checkout) {
+      task.Checkout = false;
+    } else {
+      task.Checkout = true;
+    }
+  } catch (err) {
+    res.status(500).send({ erro: err.message });
+  }
+};
 
 module.exports = {
   getAllTask,
@@ -64,4 +76,5 @@ module.exports = {
   GetById,
   updateOneTask,
   deleteTask,
+  checkTask,
 };

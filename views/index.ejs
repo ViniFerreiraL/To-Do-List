@@ -55,8 +55,12 @@
     <section id="tasks" class="tasks">
       <ul>
         <% tasksList.forEach((task) => { %>
-        <li>
-          <a href="/"><%= task.task %> </a>
+
+        <li class="check-<%= task.Checkout %>">
+          <div>
+            <a class="check-<%= task.Checkout %>" href="/"><%= task.task %> </a>
+          </div>
+
           <div class="task-content">
             <span>
               Criado em: <%= task.date.toLocaleDateString("pt-br") %></span
