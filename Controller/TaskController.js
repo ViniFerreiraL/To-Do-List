@@ -60,10 +60,12 @@ const deleteTask = async (req, res) => {
 const checkTask = async (req, res) => {
   try {
     const task = await Task.findOne({ _id: req, params, id });
-    if (task.Checkout) {
-      task.Checkout = false;
+    if (task) {
+      task.Checkout = !task.Checkout;
+      await task.save();
+      res.redirect("/home");
     } else {
-      task.Checkout = true;
+      res.status(404).send({ erro: err.message });
     }
   } catch (err) {
     res.status(500).send({ erro: err.message });

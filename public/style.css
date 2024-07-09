@@ -227,8 +227,7 @@ div#btns a#btnYes:hover {
   color: black;
 }
 
-ul li.check-true,
-ul li.check-false {
+ul li.check-true {
   background-color: #f1ece6;
   color: black;
   text-decoration: line-through;
@@ -247,7 +246,7 @@ ul li a.check-true::before {
   transform: rotate(45deg);
 }
 
-ul li a.check-false::before {
+ul li a.check-true::after {
   content: "";
   position: absolute;
   border: black solid;

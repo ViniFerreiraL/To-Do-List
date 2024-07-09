@@ -30,7 +30,9 @@
             Adicionar
           </button>
         </form>
+      </div>
 
+      <div class="container">
         <% } else{ %>
         <h1 class="classTitle">EDITAR TAREFA</h1>
         <form
@@ -56,9 +58,14 @@
       <ul>
         <% tasksList.forEach((task) => { %>
 
-        <li class="check-<%= task.Checkout %>">
+        <li class="check-<%= task.Checkout ? 'true' : 'false' %>">
           <div>
-            <a class="check-<%= task.Checkout %>" href="/"><%= task.task %> </a>
+            <a
+              class="check-link check-<%= task.Checkout ? 'true' : 'false' %>"
+              href="/Checkout/<%= task._id %>"
+            >
+              <%= task.task %>
+            </a>
           </div>
 
           <div class="task-content">
