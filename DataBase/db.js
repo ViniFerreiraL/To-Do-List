@@ -2,9 +2,7 @@ const mongoose = require("mongoose");
 
 const connectToDb = () => {
   mongoose
-    .connect(
-      "mongodb+srv://Router:admin@cluster0.adkx9ue.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-    )
+    .connect(process.env.DATABASE)
     //Aqui estou tentando testando, caso esteja tudo certo ele me passa essa mensagem
     .then(() => {
       console.log("Mongo Atlas Conectado");
